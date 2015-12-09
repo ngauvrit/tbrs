@@ -4,12 +4,16 @@
 December 4th, 2015
 
 
-Table of content:
-# What is the tbrs R-function?
-# How to import the tbrs function into R?
-# Parameters
-# Example
-# References
+## Table of content:
+> What is the tbrs R-function?
+
+> How to import the tbrs function into R?
+
+> Parameters
+
+> Example
+
+> References
 
 
 
