@@ -28,23 +28,23 @@ The easiest way to use the function is to download or copy-paste the code from t
 ### Parameters
 Parameters of the tbrs functions are as follow:
 
--- taskString (required) is a character string describing the memory task you are interested in. In this string, each symbol correspond to a one-second interval. “L” means that a letter (to-be-remembered item) is presented. “0” means free time. “1” means that a dual task is being performed. For instance, say a letter like “K” is presented one seconde, then there is a free second, then letter “M” is presented, then 5 seconds are devoted to dual tasks, and 1 second free before recall. You would code that as “L0L11110”.
+* taskString (required) is a character string describing the memory task you are interested in. In this string, each symbol correspond to a one-second interval. “L” means that a letter (to-be-remembered item) is presented. “0” means free time. “1” means that a dual task is being performed. For instance, say a letter like “K” is presented one seconde, then there is a free second, then letter “M” is presented, then 5 seconds are devoted to dual tasks, and 1 second free before recall. You would code that as “L0L11110”.
 
--- startType is either “first”, “next” or “lowest”. See our paper for more information.
+* startType is either “first”, “next” or “lowest”. See our paper for more information.
 
--- type is either “steady” or “threshold”. See our paper for more information.
+* type is either “steady” or “threshold”. See our paper for more information.
 
--- baseline is the log of activation during presentation. For instance, if you type “baseline=2”, the activation is set to exp(2) when an item is presented.
+* baseline is the log of activation during presentation. For instance, if you type “baseline=2”, the activation is set to exp(2) when an item is presented.
 
--- duration is either the duration of refreshment of a particular item in the “steady” variant, or the log of activation that has to be reached before switching in the “threshold” variant. NOTE: duration is expressed in tenth of seconds and should be an integer.
+* duration is either the duration of refreshment of a particular item in the “steady” variant, or the log of activation that has to be reached before switching in the “threshold” variant. NOTE: duration is expressed in tenth of seconds and should be an integer.
 
--- d and r are the decay and refreshment rate. They are expressed in points of log-activation per second. For instance, if you set d = 1, the log of activation loses one point in a second, therefore the activation is divided by exp(1) (2.71), meaning that the odd of correct recall is divided by 2.71 every second.
+* d and r are the decay and refreshment rate. They are expressed in points of log-activation per second. For instance, if you set d = 1, the log of activation loses one point in a second, therefore the activation is divided by exp(1) (2.71), meaning that the odd of correct recall is divided by 2.71 every second.
 
 ### Example
 To use the function, just type “tbrs(…)”
 
-tbrs("L01L10L00000",type="steady",startType="first",d=1,r=3,duration=3,baseline=0)
-
+> tbrs("L01L10L00000",type="steady",startType="first",d=1,r=3,duration=3,baseline=0)
+>
 > [1] 0.9308616 0.5986877 0.7310586
 
 The function traces the corresponding plot, and returns the list of estimated probability of recall at the end of the task.
