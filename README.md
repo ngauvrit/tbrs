@@ -23,7 +23,7 @@ The tbrs function defined below is an R-script implementing the TBRS2 model of w
 The tbrs function computes activation (odd of correct recall) by tenth of second.
 
 ### How to import the tbrs function into R?
-The easiest way to use the function is to download or copy-paste the code from the [tbrsRscript.R](https://github.com/ngauvrit/tbrs/tbrsRscript.R) file. Once this is done, just run the script (feel free to tweak the function as you see fit). You can now use the function tbrs().
+The easiest way to use the function is to download or copy-paste the code from the [tbrsRscript.R](https://github.com/ngauvrit/tbrs/) file. Once this is done, just run the script (feel free to tweak the function as you see fit). You can now use the function tbrs().
 
 ### Parameters
 Parameters of the tbrs functions are as follow:
